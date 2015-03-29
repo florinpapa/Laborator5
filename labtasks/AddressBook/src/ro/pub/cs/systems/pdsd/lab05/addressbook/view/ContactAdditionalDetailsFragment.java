@@ -41,6 +41,11 @@ public class ContactAdditionalDetailsFragment extends Fragment implements Loader
 	TextView contactPhonesTextView;
 	TextView contactEmailsTextView;
 	
+	public ContactAdditionalDetailsFragment() {
+		super();
+		this.selectionArguments = new String[] { };
+	}	
+
 	public ContactAdditionalDetailsFragment(String selectionCriteria) {
 		this.selectionArguments = new String[] { selectionCriteria };
 	}

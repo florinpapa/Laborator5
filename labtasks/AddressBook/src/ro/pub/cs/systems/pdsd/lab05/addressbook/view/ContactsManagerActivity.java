@@ -260,7 +260,7 @@ public class ContactsManagerActivity extends Activity {
 										contactNameEditText.getText().toString())
 								.build());
 						index = 0;
-						while (index < contactPhoneNumberControls.size()) {
+						while ((index < contactPhoneNumberControls.size()) && (finalContactPhones != null)) {
 							contentProviderOperations.add(ContentProviderOperation
 									.newUpdate(ContactsContract.Data.CONTENT_URI)
 									.withSelection(
@@ -284,7 +284,7 @@ public class ContactsManagerActivity extends Activity {
 							index += 2;
 						}
 						index = 0;
-						while (index < contactEmailAddressControls.size()) {
+						while ((index < contactEmailAddressControls.size()) && (finalContactEmails != null)) {
 							contentProviderOperations.add(ContentProviderOperation
 									.newUpdate(ContactsContract.Data.CONTENT_URI)
 									.withSelection(
